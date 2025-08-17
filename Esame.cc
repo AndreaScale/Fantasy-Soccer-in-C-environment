@@ -60,7 +60,7 @@ return a.prendi_nome() == b.prendi_nome() && a.prendi_valutazione() == b.prendi_
 }
 
 bool operator!=(const Giocatore& a, const Giocatore& b) {
-return a.prendi_valutazione() != b.prendi_valutazione() || a.prendi_valutazione() != b.prendi_valutazione();
+return !(a == b);
 }
 
 std::ostream& operator<<(std::ostream& os, const Giocatore& a) {
@@ -138,7 +138,7 @@ Squadra::Squadra(giocatori l, const string& s, int m) {
 bool Squadra::contiene(const Giocatore& x) const {
     giocatori::const_iterator it = rosa.cbegin();
     while(it != rosa.cend() && *it != x) it++;
-    return *it == x;
+    return it != rosa.cend();
 }
 
 bool operator< (const Squadra& a, const Squadra& b) {  //Ordine per Squadre nella mappa, dove le squadre sono usate come chiave.
