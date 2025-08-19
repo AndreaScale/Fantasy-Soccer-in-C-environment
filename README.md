@@ -45,8 +45,8 @@ These tests verify core functionality such as checking whether a team contains a
 ```
 
 ## Authors
-- Andrea Scalenghe
 - Matteo Morabito
+- Andrea Scalenghe
 
 ## License
 This project is released under the [MIT License](https://opensource.org/licenses/MIT).
